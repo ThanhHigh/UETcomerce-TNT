@@ -1,0 +1,289 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "878b3b65e43a7e1c2c8a4be9cb4de830",
+    "packages": [
+        {
+            "name": "avada/module-proofo",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Proofo/proofo-magento-2.git",
+                "reference": "b25831077338cac895d7403e03938606a2fadfb6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Proofo/proofo-magento-2/zipball/b25831077338cac895d7403e03938606a2fadfb6",
+                "reference": "b25831077338cac895d7403e03938606a2fadfb6",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Avada\\Proofo\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Proofo Team",
+                    "email": "proofo@avada.io",
+                    "homepage": "https://proofo.io",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Proofo Social Proof",
+            "support": {
+                "issues": "https://github.com/Proofo/proofo-magento-2/issues",
+                "source": "https://github.com/Proofo/proofo-magento-2/tree/master"
+            },
+            "time": "2020-07-02T09:11:56+00:00"
+        },
+        {
+            "name": "mageplaza/magento-2-blog-extension",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-blog.git",
+                "reference": "c8418ceea4a7f579b7660fe6a15be5379b33bc21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-blog/zipball/c8418ceea4a7f579b7660fe6a15be5379b33bc21",
+                "reference": "c8418ceea4a7f579b7660fe6a15be5379b33bc21",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Blog\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Blog extension",
+            "keywords": [
+                "blog",
+                "magento 2",
+                "magento 2 blog",
+                "magento2",
+                "mageplaza"
+            ],
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-blog/issues",
+                "source": "https://github.com/mageplaza/magento-2-blog/tree/v4.1.0"
+            },
+            "time": "2021-05-11T08:59:12+00:00"
+        },
+        {
+            "name": "mageplaza/module-banner-slider",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-banner-slider.git",
+                "reference": "f47ba4f840da793cb80bce8476db63ab4bc00e82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-banner-slider/zipball/f47ba4f840da793cb80bce8476db63ab4bc00e82",
+                "reference": "f47ba4f840da793cb80bce8476db63ab4bc00e82",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\BannerSlider\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Banner Slider extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-banner-slider/issues",
+                "source": "https://github.com/mageplaza/magento-2-banner-slider/tree/v4.0.0"
+            },
+            "time": "2020-11-09T02:57:48+00:00"
+        },
+        {
+            "name": "mageplaza/module-core",
+            "version": "1.4.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/module-core.git",
+                "reference": "d050c9f35b04197e97b6747d7dbf1f164b1f26fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/d050c9f35b04197e97b6747d7dbf1f164b1f26fe",
+                "reference": "d050c9f35b04197e97b6747d7dbf1f164b1f26fe",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Mageplaza Core for Magento 2",
+            "support": {
+                "issues": "https://github.com/mageplaza/module-core/issues",
+                "source": "https://github.com/mageplaza/module-core/tree/v1.4.10"
+            },
+            "time": "2020-12-07T08:10:17+00:00"
+        },
+        {
+            "name": "magiccart/community",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magiccart/module-community.git",
+                "reference": "bc15739382ababab9877189c624c791e9ad5ffde"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magiccart/module-community/zipball/bc15739382ababab9877189c624c791e9ad5ffde",
+                "reference": "bc15739382ababab9877189c624c791e9ad5ffde",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magiccart\\Community\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Magiccart",
+                    "email": "support@alothemes.com",
+                    "homepage": "https://alothemes.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "This module is require for other module from magiccart.",
+            "support": {
+                "issues": "https://github.com/magiccart/module-community/issues",
+                "source": "https://github.com/magiccart/module-community/tree/1.0.3"
+            },
+            "time": "2021-03-29T03:32:38+00:00"
+        },
+        {
+            "name": "magiccart/magicslider",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magiccart/magento2-magicslider.git",
+                "reference": "480ca73bc0e0a19ec6bfce0d11a56ed05b05a41a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magiccart/magento2-magicslider/zipball/480ca73bc0e0a19ec6bfce0d11a56ed05b05a41a",
+                "reference": "480ca73bc0e0a19ec6bfce0d11a56ed05b05a41a",
+                "shasum": ""
+            },
+            "require": {
+                "magiccart/community": ">=1.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magiccart\\Magicslider\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alothemes",
+                    "email": "support@alothemes.com",
+                    "homepage": "https://alothemes.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Banner slider flexibly to any page on live store.",
+            "support": {
+                "issues": "https://github.com/magiccart/magento2-magicslider/issues",
+                "source": "https://github.com/magiccart/magento2-magicslider/tree/1.0.1"
+            },
+            "time": "2020-10-30T09:51:40+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

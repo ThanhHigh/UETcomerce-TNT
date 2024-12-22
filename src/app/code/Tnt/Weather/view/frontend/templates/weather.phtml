@@ -1,0 +1,84 @@
+<?php
+$ch = curl_init();
+
+$url = 'https://api.openweathermap.org/data/2.5/forecast?q=Hanoi,vn&units=metric&APPID=';
+$api_key = '8ab3e6d73bd00413bc0a7cecc0ac675a';
+$url = $url . $api_key;
+
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_URL, $url);
+$result = curl_exec($ch);
+curl_close($ch);
+
+$data = json_decode($result, true);
+
+function getIconUrl($iconName)
+{
+    return 'https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/' . $iconName . '.png';
+}
+
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+
+function translateWeatherDescription($description) {
+    $translations = [
+        'clear sky' => 'Trời quang',
+        'few clouds' => 'Ít mây',
+        'scattered clouds' => 'Mây rải rác',
+        'broken clouds' => 'Mây đứt đoạn',
+        'shower rain' => 'Mưa rào',
+        'rain' => 'Mưa',
+        'thunderstorm' => 'Giông bão',
+        'snow' => 'Tuyết',
+        'mist' => 'Sương mù'
+    ];
+    return $translations[strtolower($description)] ?? $description;
+}
+
+function formatDateTime($datetimeString) {
+    $datetime = new DateTime($datetimeString);
+    return $datetime->format('H:i | d - M');
+}
+?>
+
+
+<div class="weather-container">
+    <div class="weather-header">
+        <h2>Thời tiết tại Hà Nội</h2>
+    </div>
+
+    <div class="current-weather">
+        <h3 class="section-title">Thời tiết hiện tại</h3>
+        <?php $firstItem = $data['list'][0]; ?>
+        <div class="weather-card">
+            <div>
+                <img src="<?= getIconUrl($firstItem['weather'][0]['icon']) ?>" alt="<?= $firstItem['weather'][0]['description'] ?>">
+            </div>
+            <div class="weather-details">
+                <p><strong>Thời gian:</strong> <?= formatDateTime($firstItem['dt_txt']) ?></p>
+                <p><strong>Nhiệt độ:</strong> <?= intval($firstItem['main']['temp']) ?> °C</p>
+                <p><strong>Cảm giác như:</strong> <?= intval($firstItem['main']['feels_like']) ?> °C</p>
+                <p><strong>Độ ẩm:</strong> <?= $firstItem['main']['humidity'] ?>%</p>
+                <p><strong>Thời tiết:</strong> <?= translateWeatherDescription($firstItem['weather'][0]['description']) ?></p>
+                <p><strong>Tốc độ gió:</strong> <?= $firstItem['wind']['speed'] ?> m/s</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="forecast">
+        <h3 class="section-title">Dự báo sắp tới</h3>
+        <?php foreach (array_slice($data['list'], 1, 10) as $item): ?>
+            <div class="weather-card">
+                <div>
+                    <img src="<?= getIconUrl($item['weather'][0]['icon']) ?>" alt="<?= $item['weather'][0]['description'] ?>">
+                </div>
+                <div class="weather-details">
+                    <p><strong>Thời gian:</strong> <?= formatDateTime($item['dt_txt']) ?></p>
+                    <p><strong>Nhiệt độ:</strong> <?= intval($item['main']['temp']) ?> °C</p>
+                    <p><strong>Thời tiết:</strong> <?= translateWeatherDescription($item['weather'][0]['description']) ?></p>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+</div>

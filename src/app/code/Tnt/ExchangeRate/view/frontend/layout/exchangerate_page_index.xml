@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Tỷ giá tiền tệ</title>
+        <css src="Tnt_ExchangeRate::css/exchangerate.css"/>
+        <script src="Tnt_ExchangeRate::js/script.js" />
+    </head>
+    
+    <body>
+        <referenceContainer name="content">
+            <block class="Tnt\ExchangeRate\Block\ExchangeRateBlock"
+                template="Tnt_ExchangeRate::exchangerate.phtml" />
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,51 @@
+<?php
+$arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+);
+
+$url = "https://portal.vietcombank.com.vn/Usercontrols/TVPortal.TyGia/pXML.aspx?b=1";
+$xml = file_get_contents($url,false, stream_context_create($arrContextOptions));
+$new = simplexml_load_string($xml);
+$con = json_encode($new);
+$data = json_decode($con, true);
+
+?>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th onclick="sortTableSTT(0)">STT</th>
+                <th>Mã tiền tệ</th>
+                <th>Quốc kỳ</th>
+                <th>Tên tiền tệ</th>
+                <th>Giá mua <button class="sort-button" data-column="4" onclick="sortTable(4)"></button></th>
+                <th>Giá chuyển đổi <button class="sort-button" data-column="5" onclick="sortTable(5)"></button></th>
+                <th>Giá bán <button class="sort-button" data-column="6" onclick="sortTable(6)"></button></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($data['Exrate'] as $k => $currency): ?>
+            <tr>
+                <td data-label="STT"><?= $k+1 ?></td>
+                <td data-label="Mã tiền tệ"><?= $currency['@attributes']['CurrencyCode'] ?></td>
+                <td data-label="Quốc kỳ">
+                    <img src="https://flagcdn.com/h40/<?= strtolower(substr($currency['@attributes']['CurrencyCode'], 0, -1)) ?>.png" alt="Flag">
+                </td>
+                <td data-label="Tên tiền tệ"><?= $currency['@attributes']['CurrencyName'] ?></td>
+                <td data-label="Giá mua"><?= $currency['@attributes']['Buy'] ?></td>
+                <td data-label="Giá chuyển đổi"><?= $currency['@attributes']['Transfer'] ?></td>
+                <td data-label="Giá bán"><?= $currency['@attributes']['Sell'] ?></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <p class="subtitle">Bảng tỷ giá tiền tệ của ngân hàng Vietcombank, cập nhật vào <?= $data['DateTime'] ?></p>
+</div>

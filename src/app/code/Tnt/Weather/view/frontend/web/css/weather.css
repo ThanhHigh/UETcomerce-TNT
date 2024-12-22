@@ -1,0 +1,98 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background: url('https://plus.unsplash.com/premium_photo-1669809948017-518b5d800d73?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.weather-container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.weather-header {
+    text-align: center;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.weather-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.current-weather, .forecast {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #0072ff;
+    border-bottom: 2px solid #00c6ff;
+    display: inline-block;
+}
+
+.weather-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card img {
+    width: 90px;
+    height: 90px;
+}
+
+.weather-details {
+    flex: 1;
+    font-size: 16px;
+}
+
+.weather-details p {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.weather-details p strong {
+    color: #0072ff;
+}
+
+.weather-footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top: 20px;
+}
