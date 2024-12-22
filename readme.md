@@ -1,18 +1,18 @@
-## Laptop Shop24h (Magento framework)
+## TNT Shop (Magento framework)
 
-- https://shop24h.website/
-- https://shop24h.website/admin
+- http://tnt-tmdt.site/
+- http://tnt-tmdt.site/admin_h5zzli
 
-### web giới thiệu : **https://pqthinh.github.io/magento/**
+### Giới thiệu : **https://github.com/ThanhHigh/UETcomerce-TNT.git**
 
 ## Contribute
 
 
--[Hoang Van Giap](https://github.com/giapdz): Cài đặt + deploy + module thanh toán + thời tiết + tiền tệ  + tin tức + admin cloud 
+-Tran Hau Nam
 
--[Nguyen Duc Khoi](https://www.facebook.com/duckhoi.uet) : change theme + add product + viết tài liệu
+-Nguyen Duc Thanh
 
--[Pham Quang Thinh](https://github.com/pqthinh) : init project + Cài đặt + deploy + module chat + git manager
+-Pham Thanh Tung
 
 
 ## Cài đặt ứng dụng
@@ -27,8 +27,7 @@
 1 Clone project 
 
 ```
-git clone https://github.com/pqthinh/magento.git
-cd magento
+git clone https://github.com/ThanhHigh/UETcomerce-TNT.git
 ```
 
 2 Pull image docker
@@ -50,7 +49,7 @@ bin/magento app:config:import
 bin/restart
 ```
 
-3 Phát triển module
+3 Build module
 
 reindex cache: 
 `bin/magento indexer:reindex`
@@ -66,19 +65,9 @@ build code:
 
 ```
 username : admin
-password : admin123
+password : Admin@123
 ```
 
-## Reporting bugs
-
-You found a bug? Please report it to our [shop24h](https://www.facebook.com/pqthinh.uet/). Thank you!
 
 
-## Contact
-
-Here you can find our [shop24h](https://www.facebook.com/pqthinh.uet/)
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [shop24h](https://www.facebook.com/pqthinh.uet/) or [pqthinh](https://www.facebook.com/pqthinh.uet/) and we’ll help you sort it out.
 
